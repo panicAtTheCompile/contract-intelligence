@@ -1,0 +1,6 @@
+.env
+output/
+data/contracts/
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
