@@ -1,101 +1,126 @@
-# Contract Intelligence System for Automated Legal Document Analysis
+# 📄 Contract Intelligence System
 
-## Overview
+An end-to-end Legal NLP and Contract Analytics platform that transforms unstructured financing agreement PDFs into actionable business intelligence.
 
-This project presents an end-to-end **Contract Intelligence Pipeline** for analyzing synthetic financing agreements.
-
-The system transforms unstructured PDF contracts into structured datasets and generates legal insights through information extraction, exploratory analysis, and contract intelligence techniques.
-
-The project was developed using Python and focuses on document processing, legal NLP concepts, contract analytics, and rule-based intelligence systems.
+The system automatically extracts contract metadata, identifies legal clauses, generates contract summaries, performs risk assessment, classifies legal clauses, and provides an interactive Streamlit application for real-time contract analysis.
 
 ---
 
-## Project Objectives
+## 🚀 Features
 
-* Extract information from PDF-based contracts
-* Identify key legal entities and metadata
-* Detect legal clauses and contractual obligations
-* Build structured datasets from unstructured documents
-* Perform exploratory data analysis (EDA)
-* Generate contract intelligence and risk insights
-* Establish a foundation for future Legal AI applications
+### Contract Extraction
+- PDF text extraction using PDFPlumber
+- Borrower identification
+- Lender identification
+- Financing amount extraction
+- Jurisdiction detection
+- Clause extraction
+- Contract obligation detection
+
+### Contract Analytics
+- Contract type distribution analysis
+- Borrower analytics
+- Financing amount analysis
+- Clause frequency analysis
+- Obligation frequency analysis
+- Exploratory Data Analysis (EDA)
+
+### Contract Intelligence
+- Rule-based risk assessment
+- Contract intelligence dashboard
+- High-value contract identification
+- Contract portfolio insights
+
+### Legal NLP
+- Clause classification engine
+- Legal category mapping
+- Contract summarization
+- Contract type prediction using Machine Learning
+
+### Streamlit Application
+- Upload contract PDFs
+- Automated contract processing
+- Real-time clause detection
+- Risk score generation
+- Contract summary generation
 
 ---
 
-## Dataset
+# 🏗️ System Architecture
 
-The project uses a dataset of **30 synthetic financing agreements** containing:
-
-* Car Financing Agreements
-* Health Financing Agreements
-* Motorcycle Financing Agreements
-* Real Estate Financing Agreements
-* Student Loan Agreements
-
-Each contract contains:
-
-* Borrower Information
-* Lender Information
-* Financing Amount
-* Legal Clauses
-* Jurisdiction Information
-* Contractual Obligations
+![System Architecture](assets/architecture_diagram.png)
 
 ---
 
-## Project Architecture
+# 🖥️ Application Demo
 
-PDF Contracts
+![Streamlit Demo](assets/app_demo.png)
 
-↓
+---
 
-Text Extraction (pdfplumber)
+# 📊 Analytics Dashboard
 
-↓
+![Analytics Dashboard](assets/analytics_dashboard.png)
 
-Metadata Extraction
+---
 
-↓
+# 🚨 Risk Intelligence Dashboard
 
-Clause Detection
+![Risk Intelligence](assets/intelligence_dashboard.png)
 
-↓
+---
 
-Obligation Extraction
+# 🔄 Project Workflow
 
-↓
-
-Structured Dataset
-
-↓
-
-Exploratory Data Analysis
-
-↓
-
+```text
+Contract PDF
+      ↓
+PDF Text Extraction
+      ↓
+Information Extraction
+      ↓
+Structured Dataset Creation
+      ↓
+Contract Analytics
+      ↓
+Clause Classification
+      ↓
+Contract Summarization
+      ↓
 Risk Assessment
-
-↓
-
-Contract Intelligence
+      ↓
+Machine Learning Classification
+      ↓
+Streamlit Application
+```
 
 ---
 
-## Project Structure
+# 📁 Project Structure
 
 ```text
 contract-intelligence/
 
+├── app/
+│   └── app.py
+│
+├── notebooks/
+│   ├── 01_dataset_exploration.ipynb
+│   ├── 02_contract_analytics.ipynb
+│   ├── 03_contract_intelligence.ipynb
+│   ├── 04_clause_classification.ipynb
+│   ├── 05_contract_summarization.ipynb
+│   └── 06_contract_type_prediction.ipynb
+│
 ├── data/
 │   ├── raw-contracts/
 │   └── processed/
-│       ├── contracts.csv
-│       └── contracts.xlsx
 │
-├── notebooks/
-│   ├── 01_data_extraction.ipynb
-│   ├── 02_contract_analytics.ipynb
-│   └── 03_contract_intelligence.ipynb
+├── assets/
+│   ├── architecture_diagram.png
+│   ├── app_demo.png
+│   ├── analytics_dashboard.png
+│   └── intelligence_dashboard.png
 │
 ├── requirements.txt
 ├── README.md
@@ -104,158 +129,136 @@ contract-intelligence/
 
 ---
 
-# Notebook 1 — Data Extraction Pipeline
+# 📚 Project Modules
 
-### Objectives
-
-Transform unstructured PDF contracts into structured machine-readable datasets.
-
-### Tasks Performed
-
-* PDF discovery and ingestion
-* Text extraction using pdfplumber
-* Contract type identification
-* Borrower extraction
-* Lender extraction
-* Financing amount extraction
-* Clause extraction
-* Jurisdiction extraction
-* Obligation extraction
-* CSV and Excel dataset generation
-
-### Output
-
-Structured dataset containing:
-
-* Contract Type
-* Borrower
-* Lender
-* Amount
-* Clauses
-* Jurisdiction
-* Obligations
+| Notebook | Description |
+|-----------|------------|
+| 01 Dataset Exploration | Extract structured information from contract PDFs |
+| 02 Contract Analytics | Perform exploratory analysis and visualization |
+| 03 Contract Intelligence | Generate risk scores and contract intelligence |
+| 04 Clause Classification | Categorize clauses into legal domains |
+| 05 Contract Summarization | Generate automated contract summaries |
+| 06 Contract Type Prediction | Train a machine learning classifier |
 
 ---
 
-# Notebook 2 — Contract Analytics
+# 🧠 Machine Learning Pipeline
 
-### Objectives
+The machine learning workflow includes:
 
-Perform exploratory data analysis on the extracted contract dataset.
+- Text Feature Engineering
+- TF-IDF Vectorization
+- Logistic Regression Classification
+- Cross Validation
+- Automated Contract Type Prediction
 
-### Analysis Performed
-
-* Dataset inspection
-* Contract type distribution
-* Borrower analysis
-* Financing amount analysis
-* Contract type vs financing amount
-* Clause frequency analysis
-* Obligation frequency analysis
-* Risk scoring
-* Executive dashboard
-* Business insights generation
-
-### Key Findings
-
-* Car Financing Agreements are the most common contract type.
-* Real Estate Financing Agreements contain the largest financing amounts.
-* Financing amounts exhibit a right-skewed distribution due to high-value real estate contracts.
-* All contracts follow a standardized legal clause structure.
-* Payment and Insurance obligations appear in every agreement.
+Due to the small synthetic dataset and highly standardized contract templates, the notebook serves as a proof-of-concept machine learning pipeline demonstrating legal document classification.
 
 ---
 
-# Notebook 3 — Contract Intelligence Layer
+# ⚖️ Clause Categories
 
-### Objectives
+| Clause | Category |
+|----------|----------|
+| PURPOSE | General |
+| TERM | General |
+| PAYMENT | Financial |
+| GUARANTEES | Security |
+| INSURANCE | Compliance |
+| DEFAULT | Risk |
+| TERMINATION | Risk |
+| JURISDICTION | Legal |
 
-Generate actionable intelligence from structured legal data.
+---
 
-### Features
+# 🛠️ Tech Stack
 
-* Automated contract summaries
-* Rule-based risk assessment
-* High-value contract identification
-* Contract comparison
-* Portfolio intelligence dashboard
-* Future Legal AI architecture design
+### Programming
+- Python
 
-### Sample Intelligence Output
+### Data Processing
+- Pandas
+- NumPy
 
-```text
-Contract Type: Health Financing Agreement
+### PDF Processing
+- PDFPlumber
 
-Borrower: Julia Miller
+### Visualization
+- Matplotlib
 
-Amount: $42,751
+### Machine Learning
+- Scikit-Learn
+- TF-IDF Vectorization
+- Logistic Regression
 
-Jurisdiction: New York, NY
+### Deployment
+- Streamlit
 
-Key Obligations:
-- Pay monthly installments
-- Maintain insurance coverage
+### Development Environment
+- Jupyter Notebook
 
-Risk Indicators:
-- Default clause
-- Termination clause
-- Guarantee clause
+---
+
+# ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/panicAtTheCompile/contract-intelligence.git
+cd contract-intelligence
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
 ```
 
 ---
 
-## Technologies Used
+# ▶️ Run the Streamlit Application
 
-### Data Processing
+```bash
+streamlit run app/app.py
+```
 
-* Python
-* Pandas
+Open your browser and upload a contract PDF to generate:
 
-### Document Processing
-
-* pdfplumber
-
-### Analysis & Visualization
-
-* Matplotlib
-
-### Development Environment
-
-* Jupyter Notebook
+- Contract Summary
+- Clause Detection
+- Risk Assessment
+- Contract Intelligence
 
 ---
 
-## Skills Demonstrated
+# 📈 Key Outcomes
 
-* Information Extraction
-* Document Intelligence
-* Legal NLP
-* Data Engineering
-* Exploratory Data Analysis
-* Risk Analysis
-* Contract Analytics
-* Python Programming
-* ETL Pipeline Development
-* Rule-Based AI Systems
+- Extracted structured information from 30+ financing agreements
+- Built a legal clause classification engine
+- Developed automated contract summarization workflows
+- Implemented contract risk assessment logic
+- Created a machine learning pipeline for contract classification
+- Deployed an interactive Streamlit application for contract intelligence
 
 ---
 
-## Future Improvements
+# 🎯 Future Improvements
 
-Potential extensions include:
-
-* Named Entity Recognition (NER)
-* Contract Classification Models
-* Clause Classification
-* Contract Summarization using LLMs
-* Retrieval-Augmented Generation (RAG)
-* Legal Question Answering Systems
-* Predictive Risk Modeling
+- Named Entity Recognition using spaCy
+- Transformer-based Legal NLP Models
+- Hugging Face Integration
+- LangChain Integration
+- Retrieval-Augmented Generation (RAG)
+- Conversational Contract Chatbot
+- Cloud Deployment
 
 ---
 
-## Learning Outcomes
+# 👨‍💻 Author
 
-This project demonstrates how unstructured legal documents can be transformed into structured intelligence through document processing, information extraction, analytics, and rule-based AI techniques.
+**Harshita Pulavarti**
+ Undergraduate at IIT Kharagpur | AI/ML Enthusiast | Data Science & NLP Projects
 
-The pipeline serves as a foundation for building more advanced Legal AI and Document Intelligence systems.
+GitHub: https://github.com/panicAtTheCompile
+
+---

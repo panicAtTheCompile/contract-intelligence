@@ -1,6 +1,9 @@
+.DS_Store
 .env
 output/
 data/contracts/
 __pycache__/
 .ipynb_checkpoints/
 *.pyc
+.streamlit/
+*.pkl
